@@ -51,18 +51,18 @@ function Index() {
         className="grain-overlay pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-multiply"
       />
 
-      {/* Top bar */}
-      <header className="relative z-10 flex items-center justify-between px-6 py-8 md:px-14 md:py-10">
-        <div className="animate-rise flex items-center [animation-delay:60ms]">
+      {/* Top bar — stacked & centered on mobile, logo left + label right on desktop */}
+      <header className="relative z-10 flex flex-col items-center gap-5 px-6 py-8 text-center md:flex-row md:items-center md:justify-between md:gap-8 md:px-14 md:py-10 md:text-left">
+        <div className="animate-rise flex justify-center [animation-delay:60ms]">
           <span className="logo-shine relative inline-block overflow-hidden rounded-md">
             <img
               src={logoUrl}
               alt="Claude Kameni"
-              className="relative z-0 block h-24 w-auto md:h-32"
+              className="relative z-0 block h-36 w-auto max-w-[72vw] sm:h-40 md:h-44 lg:h-52"
             />
           </span>
         </div>
-        <span className="animate-rise font-body text-[11px] uppercase tracking-[0.42em] text-muted-foreground [animation-delay:140ms]">
+        <span className="animate-rise font-body text-[10px] uppercase tracking-[0.34em] text-muted-foreground [animation-delay:140ms] md:text-[11px] md:tracking-[0.42em]">
           Teaser — N° 001
         </span>
       </header>
